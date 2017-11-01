@@ -17,11 +17,9 @@ $n = count($s);
 // 平均时间复杂度 ---- O(n^2)
 
 for ($i = 0; $i < $n - 1; ++$i) {
-    $min = $s[$i];
     $num = $i;
     for ($j = $i + 1; $j < $n; ++$j) {
-        if ($s[$j] < $min) {
-            $min = $s[$j];
+        if ($s[$j] < $s[$num]) {
             $num = $j;
         }
     }
